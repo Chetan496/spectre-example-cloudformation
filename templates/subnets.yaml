@@ -1,0 +1,25 @@
+Parameters:
+  VpcId:
+    Type: String
+  Subnet01CidrBlock:
+    Type: String
+  Subnet02CidrBlock:
+    Type: String
+  Subnet03CidrBlock:
+    Type: String        
+Resources:
+  Subnet01:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Ref Subnet01CidrBlock
+  Subnet02:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Ref Subnet02CidrBlock
+  Subnet03:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Ref Subnet03CidrBlock

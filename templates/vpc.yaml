@@ -1,0 +1,17 @@
+Parameters:
+  CidrBlock:
+    Type: String
+  Environment:
+    Type: String
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref CidrBlock
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+
+Outputs:
+  VpcId:
+    Value: !Ref VPC
